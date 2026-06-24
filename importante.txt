@@ -1,0 +1,21 @@
+t.agricultor_nome
+t.agricultor?.nome_completo
+
+
+<select class="cfg-select" id="talhaoEstado" name="estado">
+    <option value="Em Cultivo" {{ ($t->estado ?? 'Em Cultivo') == 'Em Cultivo' ? 'selected' : '' }}>Em Cultivo</option>
+    <option value="Pousio" {{ ($t->estado ?? '') == 'Pousio' ? 'selected' : '' }}>Pousio</option>
+    <option value="Colhido" {{ ($t->estado ?? '') == 'Colhido' ? 'selected' : '' }}>Colhido</option>
+    <option value="inactivo" {{ ($t->estado ?? '') == 'inactivo' ? 'selected' : '' }}>Inactivo</option>
+    <option value="activo" {{ ($t->estado ?? '') == 'activo' ? 'selected' : '' }}>Activo</option>
+</select>
+
+<select class="cfg-select" id="talhaoEstado" name="estado">
+    <option value="Em Cultivo" @selected(($t->estado ?? 'Em Cultivo') == 'Em Cultivo'>Em Cultivo</option>
+    <option value="Pousio" @selected(($t->estado ?? '') == 'Pousio')>Pousio</option>
+    <option value="Colhido" @selected(($t->estado ?? '') == 'Colhido')>Colhido</option>
+    <option value="inactivo" @selected(($t->estado ?? '') == 'inactivo')>Inactivo</option>
+    <option value="activo" @selected(($t->estado ?? '') == 'activo')>Activo</option>
+</select>
+
+hp artisan cache:clearr php artisan cache:clearλ php artisan view:clearrphp artisan route:clear php artisan config:clear p
